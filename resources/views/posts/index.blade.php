@@ -29,5 +29,5 @@
             </div>
         </div>
     @endforeach
-    <a href="/posts/create">New Post</a>
+    <a href="{{ url('/posts/create') }}">New Post</a>
 @endsection

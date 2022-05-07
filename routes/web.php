@@ -16,7 +16,12 @@ Route::get('/', function () {
 });
 
 Route::resource('posts', 'PostController');
- 
-if (env('APP_ENV') === 'local') {
-   URL::forceScheme('https');
-}
+Route::get('ex', 'PostExController@index');
+Route::get('ex_detail', 'PostExController@detail');
+Route::get('ex_init', 'PostExController@init');
+Route::get('ex_entry', 'PostExController@entry');
+// Route::get('sec', 'PostSecController@index2');
+// Route::get('thd', 'PostThdController@index');
+// if (env('APP_ENV') === 'local') {
+//     URL::forceScheme('https');
+//  }
